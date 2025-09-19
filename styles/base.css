@@ -1,0 +1,128 @@
+body {
+       font-family: "Lato", sans-serif;
+       font-weight: 400;
+       color: #000;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+       font-family: "Roboto", sans-serif;
+       font-weight: 700;
+}
+
+#course-title {
+       display: block;
+}
+
+nav a {
+       display: block;
+}
+
+nav ul {
+       list-style-type: none;
+       padding: 0;
+       margin: 0;
+}
+
+nav ul {
+       display: flex;
+       justify-content: space-around;
+       background-color:gray;
+       padding: 10px 0;
+       
+
+}
+
+nav a:hover {
+       color: rgb(0, 64, 255);
+       text-decoration: underline;
+       font-weight: bold;
+       border: gray;
+}
+
+
+
+main {
+       max-width: 900px;
+       margin: auto;
+       padding: 10px;
+       border-color: #000;
+}
+
+.card-container {
+  display: grid;                    
+  grid-template-columns: 1fr;       
+  gap: 1rem;                        
+  max-width: 900px;             
+  margin: 0 auto;  
+  padding: 1rem;
+}
+
+.card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.left-img {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+.right-img {
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+footer {
+       text-align: center;
+       font-size: 0.8em;
+       color: #666;
+       margin-top: 20px;
+       padding: 10px;
+       border-top: 1px solid #ccc;
+}
+
+header {
+       background-color: #f4f4f4;
+       display: block;
+       justify-content: space-between;
+       align-items: center;
+       padding: 10px 0;
+       border-bottom: 1px solid #ccc;
+       margin-bottom: 20px;
+}
+
+#course-title {
+       font-size: 1.2em;
+       font-weight: bold;
+       text-align: center;
+       margin-bottom: 10px;
+       color: #333;
+
+}
+
+main {
+       display: grid;
+       grid-template-columns: 2fr 1fr;
+       gap: 20px;
+       padding: 20px;
+}      
+       
+
+
+.left-column {
+       display: flex;
+       flex-direction: column;
+       gap: 20px;
+       padding: 10px;
+}
