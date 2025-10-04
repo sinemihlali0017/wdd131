@@ -1,0 +1,35 @@
+
+nav ul {
+    
+    list-style-type: none;
+    justify-content: space-around;
+    gap: 20px;
+    display: flex;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav li:hover {
+    background-color: #555;
+}
+
+
+.gallery-1 {
+    display: grid;                   /* enables CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 50px;                       
+    justify-items: center;         
+    align-items: center;              
+    padding: 20px;     
+    justify-items:  space-evenly;
+}
+
+.gallery-2 {
+    display: grid;                   /* enables CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 50px;                       
+    justify-items: center;         
+    align-items: center;              
+    padding: 20px;     
+    justify-items:  space-evenly;
+}
