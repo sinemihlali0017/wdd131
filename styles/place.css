@@ -1,205 +1,123 @@
-/* CSS Variables */
-:root {
-    --color-black: #000000;
-    --color-green: #007749;
-    --color-yellow: #FFB81C;
-    --color-red: #DE3831;
-    --color-blue: #002395;
-    --color-white: #FFFFFF;
-    --color-light: #F5F5F5;
-    --color-dark: #333333;
-    --color-gray: #777777;
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 1.5rem;
-    --spacing-lg: 2rem;
-    --spacing-xl: 3rem;
-    --border-radius: 8px;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
-}
-
-/* Base Styles */
-* {
+/* ============================
+   Global styles
+============================ */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
     font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    color: var(--color-dark);
-    background-color: var(--color-light);
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-sm);
-}
-
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    margin-bottom: var(--spacing-md);
-}
-
-h1 {
-    font-size: 2.5rem;
-    color: var(--color-white);
-}
-
-h2 {
-    font-size: 1.8rem;
-    color: var(--color-green);
-    position: relative;
-    padding-bottom: var(--spacing-xs);
-}
-
-h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background-color: var(--color-yellow);
-}
-
-/* Header Styles */
-header {
-    background: linear-gradient(to right, var(--color-black), var(--color-green), var(--color-yellow), var(--color-red), var(--color-blue));
-    color: var(--color-white);
-    padding: var(--spacing-lg) 0;
+    background-color: #fff;
+    color: #333;
     text-align: center;
 }
 
-/* Hero Section */
-.hero {
-    margin-bottom: var(--spacing-xl);
+/* ============================
+   Header
+============================ */
+.site-header {
+    padding: 1rem;
+    background-color: #007f5f;
+    color: white;
 }
 
-.hero-image {
+/* ============================
+   Hero image
+============================ */
+.hero picture img {
     width: 100%;
-    height: 400px;
-    overflow: hidden;
-}
-
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     display: block;
 }
 
-/* Content Sections */
-.data-section, .weather-section {
-    background-color: var(--color-white);
-    border-radius: var(--border-radius);
-    padding: var(--spacing-lg);
-    margin-bottom: var(--spacing-lg);
-    box-shadow: var(--shadow);
+/* ============================
+   Country Data
+============================ */
+.country-data {
+    margin: 2rem auto;
+    max-width: 600px;
 }
 
-.data-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: var(--spacing-md);
+.country-data h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1rem;
 }
 
-.data-item, .weather-item {
+.data-items {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding: var(--spacing-xs) 0;
-    border-bottom: 1px solid #eee;
 }
 
-.data-item:last-child, .weather-item:last-child {
-    border-bottom: none;
+.data-item {
+    width: 48%;
+    margin-bottom: 0.5rem;
+    text-align: left;
 }
 
-.label {
-    font-weight: 600;
-    color: var(--color-dark);
+.data-item .label {
+    font-weight: bold;
 }
 
-.value {
-    color: var(--color-gray);
+/* ============================
+   Weather Section
+============================ */
+.weather {
+    margin: 2rem auto;
+    max-width: 600px;
+    padding: 1rem;
+    border: 2px solid #007f5f;
+    border-radius: 10px;
 }
 
-/* Weather Section */
-.weather-content {
+.weather-items {
     display: flex;
-    align-items: flex-start;
-    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
 }
 
-.weather-icon {
-    flex-shrink: 0;
+.weather-item {
+    width: 48%;
+    margin-bottom: 0.5rem;
 }
 
-.weather-icon svg {
-    fill: var(--color-blue);
+.weather-icon::after {
+    content: "⛅"; /* Emoji for wide view */
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
 }
 
-.weather-details {
-    flex-grow: 1;
+.mobile-weather-icon {
+    display: none;
 }
 
-/* Footer */
-footer {
-    background-color: var(--color-dark);
-    color: var(--color-white);
-    padding: var(--spacing-lg) 0;
-    text-align: center;
-    margin-top: var(--spacing-xl);
+/* ============================
+   Footer
+============================ */
+.site-footer {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #007f5f;
+    color: #fff;
 }
 
-footer p {
-    margin-bottom: var(--spacing-xs);
-}
-
-/* Media Queries */
+/* ============================
+   Responsive Media Queries
+============================ */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
-    
-    h2 {
-        font-size: 1.5rem;
-    }
-    
-    .hero-image {
-        height: 300px;
-    }
-    
-    .data-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .weather-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .weather-icon {
-        margin-bottom: var(--spacing-sm);
-    }
-    
     .data-item, .weather-item {
-        flex-direction: column;
-        align-items: center;
-        gap: var(--spacing-xs);
+        width: 100%;
+    }
+
+    .weather-icon::after {
+        content: ""; /* hide emoji on mobile */
+    }
+
+    .mobile-weather-icon {
+        display: inline-block;
+        width: 50px;
+        margin-top: 0.5rem;
     }
 }
 
-@media (min-width: 769px) {
-    .weather-section h2::after {
-        content: '⛅';
-        margin-left: var(--spacing-sm);
-        font-size: 1.5rem;
-    }
-}
+
+.country-data {float: left;}

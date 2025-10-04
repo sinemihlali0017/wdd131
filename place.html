@@ -4,116 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>South Africa - weather</title>
+    <meta name="description" content="Official information about South Africa including data, weather, and tourism">
+    <meta name="author" content="Sinemihlali mahlathini">
+    <meta name="keywords" content="South Africa, Country Info, Tourism, Weather, Population, Area">
+    <meta desceription="This page provides official information about South Africa, including its area, population, capitals, languages, currency, and current weather conditions. It also features a hero image showcasing the country's natural beauty.">
+    <link rel="stylesheet" href="styles/place.css">
+     <script src="scripts/place.js" defer></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    
     <link rel="stylesheet" href="styles/place.css">
-    <script src="scripts/place.js" defer></script>
-    <meta name="author" content="Sinemihlali Mahlathini">
-    <meta name="description" content="This page provides information about South Africa, including key data points and current weather conditions.">
+
+    
+    
 </head>
 <body>
 
     
-    <header>
-        <div class="container">
-            <h1>South Africa</h1>
-        </div>
+    <header class="site-header">
+        <h1>South Africa</h1>
     </header>
+    <section class="hero">
+        <picture>
+            <source srcset="images/hero.lio.png" media="(min-width: 1200px)">
+            <source srcset="images/laie.png" media="(min-width: 768px)">
+            <img src="images/southafrica.jpg" alt="Beautiful South Africa landscape" loading="lazy">
+        </picture>
+    </section>
 
-    <main>
-        <div class="container main-content">
-            <section class="data-section">
-                <h2>Data</h2>
-                <div class="data-grid">
-                    <div class="data-item">
-                        <span class="label">Area:</span>
-                        <span class="value">1,219,090 sq km</span>
-                    </div>
-                    <div class="data-item">
-                        <span class="label">Population:</span>
-                        <span class="value">60,414,495</span>
-                    </div>
-                    <div class="data-item">
-                        <span class="label">Capitals:</span>
-                        <span class="value">Pretoria, Cape Town, Bloemfontein</span>
-                    </div>
-                    <div class="data-item">
-                        <span class="label">Languages:</span>
-                        <span class="value">Zulu, Xhosa, Afrikaans, English</span>
-                    </div>
-                    <div class="data-item">
-                        <span class="label">Currency:</span>
-                        <span class="value">South African Rand</span>
-                    </div>
-                    <div class="data-item">
-                        <span class="label">Time Zone:</span>
-                        <span class="value">UTC+2</span>
-                    </div>
-                    <div class="data-item">
-                        <span class="label">Calling Code:</span>
-                        <span class="value">+27</span>
-                    </div>
-                    <div class="data-item">
-                        <span class="label">Internet TLD:</span>
-                        <span class="value">.za</span>
-                    </div>
-                </div>
-            </section>
-
-            <section class="hero">
-                <div class="hero-image">
-                 <picture>
-    <
-    <source srcset="images/weather.png" media="(min-width: 1200px)">
     
-    
-    <source srcset="images/your-medium-image.webp" media="(min-width: 768px)">
-    
-    <img src="images/your-small-image.webp" 
-         loading="lazy">
-</picture>
-
-                </div>
-            </section>
-
-            <section class="weather-section">
-                <h2>Weather</h2>
-                <div class="weather-content">
-                    <div class="weather-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
-                            <path fill="none" d="M0 0h24v24H0z"/>
-                            <path d="M9.984 5.06a6.5 6.5 0 1 1 11.286 6.436A5.5 5.5 0 0 1 17.5 21L9 20.999a8 8 0 1 1 .984-15.94zm2.071.544a8.026 8.026 0 0 1 4.403 4.495 5.529 5.529 0 0 1 3.12.307 4.5 4.5 0 0 0-7.522-4.802zM17.5 19a3.5 3.5 0 1 0-2.5-5.95V13a6 6 0 1 0-6 6h8.5z"/>
-                        </svg>
-                    </div>
-                    <div class="weather-details">
-                        <div class="weather-item">
-                            <span class="label">Temperature:</span>
-                            <span class="value">18 °C</span>
-                        </div>
-                        <div class="weather-item">
-                            <span class="label">Conditions:</span>
-                            <span class="value">Partly Cloudy</span>
-                        </div>
-                        <div class="weather-item">
-                            <span class="label">Wind:</span>
-                            <span class="value">12 km/h</span>
-                        </div>
-                        <div class="weather-item">
-                            <span class="label">Wind Chill:</span>
-                            <span class="value" id="windchill">Calculating...</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <section class="country-data">
+        <h2>Data</h2>
+        <div class="data-items">
+            <div class="data-item"><span class="label">Area:</span> <span class="value">1,219,090 sq km</span></div>
+            <div class="data-item"><span class="label">Population:</span> <span class="value">60,414,495</span></div>
+            <div class="data-item"><span class="label">Capitals:</span> <span class="value">Pretoria, Cape Town, Bloemfontein</span></div>
+            <div class="data-item"><span class="label">Languages:</span> <span class="value">Zulu, Xhosa, Afrikaans, English</span></div>
+            <div class="data-item"><span class="label">Currency:</span> <span class="value">South African Rand</span></div>
         </div>
-    </main>
+    </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="currentYear"></span> 💡 Sinemihlali Mahlathini 💡 South Africa</p>
-            <p>Last Modification: <span id="lastModified"></span></p>
+    
+    <section class="weather">
+        <h2>Weather <span class="weather-icon"></span></h2>
+        <div class="weather-items">
+            <div class="weather-item"><span class="label">Temperature:</span> <span class="value" id="temperature">10</span> °C</div>
+            <div class="weather-item"><span class="label">Conditions:</span> <span class="value">Partly Cloudy</span></div>
+            <div class="weather-item"><span class="label">Wind:</span> <span class="value" id="wind-speed">5</span> km/h</div>
+            <div class="weather-item"><span class="label">Wind Chill:</span> <span class="value" id="windchill">Calculating...</span></div>
         </div>
+        <!-- Mobile SVG icon for weather -->
+        <img src="images/syk.png" alt="Weather Icon" class="mobile-weather-icon">
+    </section>
+
+    
+    <footer class="site-footer">
+        <p>&copy; <span id="currentYear"></span> 💡 South Africa | sinemihlali-mahlathini 💡</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
+
 </body>
 </html>
