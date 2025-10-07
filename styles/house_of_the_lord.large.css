@@ -1,0 +1,31 @@
+
+@media (min-width: 720px) {
+  
+  #menu-toggle {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: none;
+    width: auto;
+  }
+
+  nav a {
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+  }
+
+  
+  .temple-gallery {
+    grid-template-columns:reapet(auto-fit, minmax(250px, 1fr));
+  }
+
+  }
+
+  main h1 {
+    font-size: 2rem;
+  }
+
