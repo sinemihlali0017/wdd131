@@ -1,5 +1,5 @@
 
-
+// scripts to dynamically update the footer and toggle the nav menu//
 
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 document.getElementById("lastmodified").textContent = document.lastModified;
