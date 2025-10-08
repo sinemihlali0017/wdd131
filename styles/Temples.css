@@ -1,4 +1,4 @@
-  /* styles for  temples page mobile activity */
+/* Styles for temples page - mobile view */
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -8,13 +8,14 @@ body {
   color: #333;
 }
 
+/* HEADER */
 header {
   background-color: #1f3b73;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem; /* ← removed extra “review for me please” text */
 }
 
 header h1 {
@@ -22,7 +23,7 @@ header h1 {
   margin: 0;
 }
 
-
+/* NAV TOGGLE BUTTON */
 #menu-toggle {
   background: none;
   border: none;
@@ -31,7 +32,7 @@ header h1 {
   cursor: pointer;
 }
 
-
+/* NAVIGATION MENU */
 nav {
   display: none;
   flex-direction: column;
@@ -54,7 +55,7 @@ nav a:hover {
   background-color: #3c63b0;
 }
 
-
+/* MAIN CONTENT */
 main {
   max-width: 900px;
   margin: 0 auto;
@@ -66,12 +67,14 @@ main h1 {
   margin-bottom: 1rem;
 }
 
+/* TEMPLE GALLERY */
 .temple-gallery {
   display: grid;
-  grid-template-columns: 5, 1fr;
+  /* ❌ Incorrect syntax: grid-template-columns: 5, 1fr; */
+  /* ✅ Corrected: */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
 }
-
 
 figure {
   background-color: white;
@@ -92,6 +95,7 @@ figcaption {
   font-weight: 600;
 }
 
+/* FOOTER */
 footer {
   background-color: #1f3b73;
   color: white;
@@ -99,4 +103,3 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
-
