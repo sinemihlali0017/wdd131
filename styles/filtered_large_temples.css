@@ -1,0 +1,33 @@
+@media (min-width: 768px) {
+  /* Desktop grid layout */
+  .res-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* Desktop menu always visible */
+  #menu-toggle {
+    display: none;
+  }
+
+  #nav-menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+    box-shadow: none;
+  }
+
+  #nav-menu a {
+    margin-left: 1rem;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .temple-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+}

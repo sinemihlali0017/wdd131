@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Gallery</title>
+    <meta name="author" content="Sinemihlali Mahlathini">
+  <meta name="description" content="A gallery showcasing various temples with filtering options.">
+    <meta name="keywords" content="Temples, Gallery, Architecture, Culture, Religion">
+
+   <script src="scripts/filtered_temples.js" defer></script>
+  
+
+  <link rel="stylesheet" href="styles/filtered_temples.css">
+    
+</head>
+<body>
+  <header>
+    <h1>Temple Album</h1>
+    <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+    <nav id="nav-menu">
+      <a href="#" class="active">Home</a>
+      <a href="#">Old</a>
+      <a href="#">New</a>
+      <a href="#">Large</a>
+      <a href="#">Small</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Home</h2>
+    <div class="res-grid"></div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> South Africa | Sinemihlali Mahlathini</p>
+    <p>Last Modified: <span id="lastmodified"></span></p>
+  </footer>
+</body>
+</html>
+
