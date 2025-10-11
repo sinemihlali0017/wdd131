@@ -1,96 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Sinemihlali Mahlathini">  
-    <meta name="description" content="A temple gallery showcasing beautiful temples around the world.">
-    <meta name="keywords" content="temple, house of the lord, gallery, worship">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Gallery</title>
+    <meta name="author" content="Sinemihlali Mahlathini">
     <script src="scripts/templess.js" defer></script>
-
-    <!-- CSS (mobile-first, then larger screens) -->
-    <link rel="stylesheet" href="styles/templess.css">
-    <link rel="stylesheet" href="styles/templess_large.css">
-
-    
-    
-
-    <title>Temple Gallery</title>
+  <link rel="stylesheet" href="styles/filtered_large_temples.css">
+ 
 </head>
-
 <body>
-    <header>
-        <span>Temple Album</span>
-        <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
-        
-        <nav id="nav-menu">
-            <a href="#">Home</a>
-            <a href="#">Old</a>
-            <a href="#">New</a>
-            <a href="#">Large</a>
-            <a href="#">Small</a>
-        </nav>
-    </header>
+  <header>
+    <h1>Temple Album</h1>
+    <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
 
-    <main>
-        <h1>Home</h1>
+    <nav id="nav-menu">
+      <a href="#" class="active">Home</a>
+      <a href="#">Old</a>
+      <a href="#">New</a>
+      <a href="#">Large</a>
+      <a href="#">Small</a>
+    </nav>
+  </header>
 
-        <section class="temple-gallery">
-            <figure>
-                <img src="images/salt_lake.jpeg" alt="Salt Lake Temple">
-                <figcaption>Salt Lake City Temple</figcaption>
-            </figure>
+  <main>
+    <h2>Home</h2>
+    <div class="res-grid"></div>
+  </main>
 
-            <figure>
-                <img src="images/rome.jpeg" alt="Rome Temple">
-                <figcaption>Rome Temple</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/nahvoo.jpeg" alt="Nauvoo Temple">
-                <figcaption>Nauvoo Temple</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/cardston.jpeg" alt="Cardston Temple">
-                <figcaption>Cardston Temple</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/tokyo.jpeg" alt="Tokyo Temple">
-                <figcaption>Tokyo Temple</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/mexico.jpeg" alt="Mexico City Temple">
-                <figcaption>Mexico City Temple</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/london.jpeg" alt="London Temple">
-                <figcaption>London Temple</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/sidney.jpeg" alt="Sydney Temple">
-                <figcaption>Sydney Temple</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/laie.jpeg" alt="Laie Temple">
-                <figcaption>Laie Temple</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/durban.jpeg" alt="Durban Temple">
-                <figcaption>Durban South Africa Temple</figcaption>
-            </figure>
-        </section>
-    </main>
-   
-    <footer>
-        <p>&copy; <span id="currentyear"></span> South Africa | Sinemihlali Mahlathini</p>
-        <p>Last Modified: <span id="lastmodified"></span></p>
-    </footer>
+  <footer>
+    <p>&copy; <span id="currentyear"></span> South Africa | Sinemihlali Mahlathini</p>
+    <p>Last Modified: <span id="lastmodified"></span></p>
+  </footer>
 </body>
 </html>
