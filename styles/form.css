@@ -10,8 +10,9 @@ h1 {
   border: #141513 1px solid;
   padding: 0.5em;
   background: #543939;
-}
 
+ font-family: 'Montserrat', Arial, sans-serif;
+}
 form {
   background: #f9f9f9;
   padding: 1.5em;
