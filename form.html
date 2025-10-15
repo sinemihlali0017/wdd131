@@ -23,45 +23,51 @@
   <h1>Product Review</h1>
 
   <form action="review.html" method="get" id="reviewForm">
-    <label for="product">Product Name:</label>
-    <select id="product" name="product" required>
-      <option value="" disabled selected>Select a Product...</option>
-    </select>
+   <label for="product">Product Name:</label>
+<select id="product" name="product" required>
+  <option value="" disabled selected>Select a Product...</option>
+</select>
 
-    <fieldset>
-      <legend>Overall Rating</legend>
-      <div class="rating-group">
-        <input type="radio" id="star5" name="rating" value="5">
-        <label for="star5">★★★★★</label>
-        <input type="radio" id="star4" name="rating" value="4">
-        <label for="star4">★★★★</label>
-        <input type="radio" id="star3" name="rating" value="3">
-        <label for="star3">★★★</label>
-        <input type="radio" id="star2" name="rating" value="2">
-        <label for="star2">★★</label>
-        <input type="radio" id="star1" name="rating" value="1">
-        <label for="star1">★</label>
-      </div>
-    </fieldset>
+<fieldset>
+  <legend>Overall Rating</legend>
+  <div class="rating-group">
+    <input type="radio" id="star5" name="rating" value="5">
+    <label for="star5">★★★★★</label>
 
-    <label for="installDate">Date of Installation:</label>
-    <input type="date" id="installDate" name="installDate" required>
+    <input type="radio" id="star4" name="rating" value="4">
+    <label for="star4">★★★★</label>
 
-    <fieldset>
-      <legend>Useful Features (check all that apply)</legend>
-      <label><input type="checkbox" name="features" value="Durability"> Durability</label><br>
-      <label><input type="checkbox" name="features" value="Design"> Design</label><br>
-      <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label><br>
-      <label><input type="checkbox" name="features" value="Performance"> Performance</label>
-    </fieldset>
+    <input type="radio" id="star3" name="rating" value="3">
+    <label for="star3">★★★</label>
 
-    <label for="review">Your Review:</label>
-    <textarea id="review" name="review" rows="4" cols="50"></textarea>
+    <input type="radio" id="star2" name="rating" value="2">
+    <label for="star2">★★</label>
 
-    <label for="username">Your Name (optional):</label>
-    <input type="text" id="username" name="username">
+    <input type="radio" id="star1" name="rating" value="1">
+    <label for="star1">★</label>
+  </div>
+</fieldset>
 
-    <input type="submit" value="Submit Review">
+<label for="installDate">Date of Installation:</label>
+<input type="date" id="installDate" name="installDate" required>
+
+<fieldset>
+  <legend>Useful Features (check all that apply)</legend>
+  <label><input type="checkbox" name="features" value="Durability"> Durability</label><br>
+  <label><input type="checkbox" name="features" value="Design"> Design</label><br>
+  <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label><br>
+  <label><input type="checkbox" name="features" value="Performance"> Performance</label>
+</fieldset>
+
+<label for="review">Your Review:</label>
+<textarea id="review" name="review" rows="4" cols="50"></textarea>
+
+<label for="username">Your Name (optional):</label>
+<input type="text" id="username" name="username">
+
+
+<input type="submit" value="Submit Review">
+
   </form>
 
   <footer>
