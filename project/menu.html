@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse Sweet Crumbs Bakery menu, order delicious pastries, cakes, and desserts online. Fresh baked goods with easy cart system in Queenstown.">
+    <title>Menu & Online Ordering - Sweet Crumbs Bakery</title>
+    <script src="scripts/sweet_crumbs.js" defer></script>
+    <link rel="stylesheet" href="styles/sweet_crumbs_large.css">
+    <link rel="stylesheet" href="styles/sweet_crumbs_small.css" media="(max-width: 1024px)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header role="banner">
+    <div class="logo-container">
+        <img src="images/logo.webp" alt="Sweet Crumbs Bakery Logo" class="logo" loading="lazy" width="120" height="120">
+    </div>
+    <h1>Sweet Crumbs Bakery - Menu & Order</h1>
+</header>
+
+<nav aria-label="Main navigation">
+    <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html" class="active" aria-current="page">Menu & Order</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<main class="container" id="main-content">
+    <!-- Order Status Bar -->
+    <div id="order-status-bar" role="status">
+        <p id="open-status"></p>
+        <div id="cart-summary">
+            <span id="cart-count">0 items</span>
+            <span id="cart-total">R0.00</span>
+        </div>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="menu-page-grid">
+        <!-- Menu Table Section -->
+        <section class="menu-section" aria-labelledby="menu-heading">
+            <h2 id="menu-heading">Our Delicious Menu</h2>
+            <div class="table-container">
+                <table id="menu-table" aria-label="Bakery products menu with prices and ordering options">
+                    <caption class="sr-only">Sweet Crumbs Bakery product menu with descriptions, prices, and add to cart buttons</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Add to Cart</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="images/chocolate.jpeg" alt="Rich chocolate layered cake with chocolate frosting and decorative sprinkles" loading="lazy" class="menu-item-image" width="80" height="80">
+                                <strong>Chocolate Cake</strong>
+                            </td>
+                            <td>Rich chocolate layered cake with chocolate frosting</td>
+                            <td>R150</td>
+                            <td><button class="add-btn" data-name="Chocolate Cake" data-price="150" aria-label="Add Chocolate Cake to cart for R150">Add to Cart</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="images/cupcake.jpeg" alt="Colorful cupcake with buttercream frosting and decorative toppings" loading="lazy" class="menu-item-image" width="80" height="80">
+                                <strong>Cupcake</strong>
+                            </td>
+                            <td>Assorted flavors with buttercream frosting</td>
+                            <td>R30</td>
+                            <td><button class="add-btn" data-name="Cupcake" data-price="30" aria-label="Add Cupcake to cart for R30">Add to Cart</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="images/croissant.jpeg" alt="Golden brown buttery croissant with flaky layers" loading="lazy" class="menu-item-image" width="80" height="80">
+                                <strong>Croissant</strong>
+                            </td>
+                            <td>Buttery and flaky French croissant</td>
+                            <td>R25</td>
+                            <td><button class="add-btn" data-name="Croissant" data-price="25" aria-label="Add Croissant to cart for R25">Add to Cart</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="images/red_velvet.jpeg" alt="Red velvet cake with cream cheese frosting and red crumbs" loading="lazy" class="menu-item-image" width="80" height="80">
+                                <strong>Red Velvet Cake</strong>
+                            </td>
+                            <td>Soft red velvet cake with cream cheese frosting</td>
+                            <td>R160</td>
+                            <td><button class="add-btn" data-name="Red Velvet Cake" data-price="160" aria-label="Add Red Velvet Cake to cart for R160">Add to Cart</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="images/blue_berry.jpeg" alt="Fresh blueberry muffin with juicy berries and sugar topping" loading="lazy" class="menu-item-image" width="80" height="80">
+                                <strong>Blueberry Muffin</strong>
+                            </td>
+                            <td>Fresh blueberries in a moist muffin</td>
+                            <td>R35</td>
+                            <td><button class="add-btn" data-name="Blueberry Muffin" data-price="35" aria-label="Add Blueberry Muffin to cart for R35">Add to Cart</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="images/macaron.jpeg" alt="Colorful French macaron cookies in assorted flavors" loading="lazy" class="menu-item-image" width="80" height="80">
+                                <strong>Macaron</strong>
+                            </td>
+                            <td>Delicate almond meringue cookies with ganache</td>
+                            <td>R20</td>
+                            <td><button class="add-btn" data-name="Macaron" data-price="20" aria-label="Add Macaron to cart for R20">Add to Cart</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="images/apple_pie.jpeg" alt="Golden brown apple pie with lattice crust and cinnamon apples" loading="lazy" class="menu-item-image" width="80" height="80">
+                                <strong>Apple Pie</strong>
+                            </td>
+                            <td>Classic homemade pie with cinnamon apples</td>
+                            <td>R140</td>
+                            <td><button class="add-btn" data-name="Apple Pie" data-price="140" aria-label="Add Apple Pie to cart for R140">Add to Cart</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="images/cheesecake.jpeg" alt="Creamy cheesecake slice with berry topping and graham crust" loading="lazy" class="menu-item-image" width="80" height="80">
+                                <strong>Cheesecake Slice</strong>
+                            </td>
+                            <td>Creamy cheesecake made with love and a recipe spanning generations</td>
+                            <td>R70</td>
+                            <td><button class="add-btn" data-name="Cheesecake Slice" data-price="70" aria-label="Add Cheesecake Slice to cart for R70">Add to Cart</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="images/hot_chocolate.jpeg" alt="Steaming hot chocolate with whipped cream and chocolate shavings" loading="lazy" class="menu-item-image" width="80" height="80">
+                                <strong>Hot Chocolate</strong>
+                            </td>
+                            <td>Sweet, fresh Hot Chocolate with whipped cream</td>
+                            <td>R25</td>
+                            <td><button class="add-btn" data-name="Hot Chocolate" data-price="25" aria-label="Add Hot Chocolate to cart for R25">Add to Cart</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Order Section -->
+        <section class="order-section" id="order-section" aria-labelledby="order-heading">
+            <h2 id="order-heading">Your Order</h2>
+            <div id="order-container">
+                <ul id="order-list" aria-live="polite" aria-label="Current order items"></ul>
+                <div class="order-actions">
+                    <button id="clear-cart-btn" class="secondary-btn" aria-label="Clear all items from shopping cart">Clear Cart</button>
+                    <button id="order-submit-btn" class="primary-btn" aria-label="Submit your order for processing">Submit Order</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer role="contentinfo">
+    <p>&copy; <span id="currentyear"></span> South Africa | Sinemihlali Mahlathini / Sweet Crumbs</p>
+    <p>Last Modified: <span id="lastmodified"></span></p>
+    <p><a href="references.html">References & Credits</a></p>
+</footer>
+
+</body>
+</html>

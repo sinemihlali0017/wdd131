@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Sweet Crumbs Bakery for custom orders, catering, or general inquiries. Visit us in Queenstown or send us a message online.">
+    <title>Contact Sweet Crumbs Bakery - Custom Orders & Inquiries</title>
+    <script src="scripts/sweet_crumbs.js" defer></script>
+    <link rel="stylesheet" href="styles/sweet_crumbs_large.css">
+    <link rel="stylesheet" href="styles/sweet_crumbs_small.css" media="(max-width: 1024px)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header role="banner">
+    <div class="logo-container">
+        <img src="images/logo.webp" alt="Sweet Crumbs Bakery Logo" class="logo" loading="lazy" width="120" height="120">
+    </div>
+    <h1>Contact Sweet Crumbs Bakery</h1>
+</header>
+
+<nav aria-label="Main navigation">
+    <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu & Order</a></li>
+        <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+    </ul>
+</nav>
+
+<main class="container" id="main-content">
+    <section aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Get in Touch</h2>
+        
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Visit Our Bakery</h3>
+                <address>
+                    <p><strong>Address:</strong><br>
+                    <span>1206 Main Street<br>Queenstown, 5320<br>Eastern Cape, South Africa</span></p>
+                    
+                    <p><strong>Hours:</strong><br>
+                    <span>Monday - Friday: 8:00 AM - 6:00 PM<br>
+                    Saturday: 8:00 AM - 2:00 PM<br>
+                    Sunday: Closed</span></p>
+                    
+                    <p><strong>Phone:</strong><br>
+                    <a href="tel:+27451234567">(+27) 123-4567</a></p>
+                    
+                    <p><strong>Email:</strong><br>
+                    <a href="mailto:hello@sweetcrumbs.co.za">hello@sweetcrumbs.co.za</a></p>
+                </address>
+
+                <div class="map-placeholder">
+                    <h4>Find Us Here</h4>
+                    <p>📍 Located in the heart of Queenstown on Main Street</p>
+                    <div class="map-image">
+                        <div class="map-fallback" style="background: #f0f0f0; padding: 2rem; text-align: center; border-radius: 8px;">
+                            <p>Map: Sweet Crumbs Bakery<br>1206 Main Street, Queenstown</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form-container">
+                <h3>Send Us a Message</h3>
+                <p>Have questions about our products, want to place a custom order, or need catering for your event? We'd love to hear from you!</p>
+                
+                <form id="contact-form" novalidate aria-labelledby="contact-heading">
+                    <div class="form-group">
+                        <label for="name">Your Name <span class="required" aria-hidden="true">*</span></label>
+                        <input type="text" id="name" name="name" required aria-required="true" placeholder="Enter your full name">
+                        <span class="error-message" id="name-error" aria-live="polite"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required" aria-hidden="true">*</span></label>
+                        <input type="email" id="email" name="email" required aria-required="true" placeholder="your.email@example.com">
+                        <span class="error-message" id="email-error" aria-live="polite"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="045 123 4567">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject <span class="required" aria-hidden="true">*</span></label>
+                        <select id="subject" name="subject" required aria-required="true">
+                            <option value="">Please select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="catering">Catering Order</option>
+                            <option value="custom">Custom Cake Order</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="error-message" id="subject-error" aria-live="polite"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message <span class="required" aria-hidden="true">*</span></label>
+                        <textarea id="message" name="message" required aria-required="true" 
+                                  placeholder="Tell us about your inquiry, custom order requirements, or event details..."
+                                  minlength="10" maxlength="1000" rows="6"></textarea>
+                        <span class="error-message" id="message-error" aria-live="polite"></span>
+                        <div class="char-count"><span id="char-counter">0</span>/1000 characters</div>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Subscribe to our newsletter for special offers and new product updates</label>
+                    </div>
+                    
+                    <button type="submit" class="primary-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Contact Information -->
+    <section class="additional-info" aria-labelledby="additional-heading">
+        <h3 id="additional-heading">Additional Information</h3>
+        <div class="info-grid">
+            <article class="info-card">
+                <h4>Custom Orders</h4>
+                <p>We specialize in custom cakes and desserts for all occasions. Please contact us at least 48 hours in advance for custom orders.</p>
+            </article>
+            <article class="info-card">
+                <h4>Catering Services</h4>
+                <p>Planning an event? We offer catering services for weddings, corporate events, and private parties throughout Queenstown.</p>
+            </article>
+            <article class="info-card">
+                <h4>Delivery Options</h4>
+                <p>Free delivery within Queenstown for orders over R300. Additional charges may apply for areas outside town.</p>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer role="contentinfo">
+    <p>&copy; <span id="currentyear"></span> South Africa | Sinemihlali Mahlathini / Sweet Crumbs</p>
+    <p>Last Modified: <span id="lastmodified"></span></p>
+    <p><a href="references.html">References & Credits</a></p>
+</footer>
+
+</body>
+</html>
